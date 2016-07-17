@@ -13,17 +13,15 @@
     <body>
     aqqq11112233
 
-      <div id="d_clip_button" class="clip_button" data-clipboard-text="Copy Me!" title="Click to copy." style="border:1px solid black; padding:20px;">Copy To Clipboard test!!</div>
-
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.Core.js"></script>
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.js"></script>
+      <a id="d_clip_button">test a</a>
+      <script type="text/javascript" src="/assets/javascripts/ZeroClipboard.js"></script>
       <script type="text/javascript">
       var textArea = document.createElement("textarea");
       textArea.id = "textarea_id";
       textArea.value = "test textarea123!!!";
       document.body.appendChild(textArea);
 
-      ZeroClipboard.config( { swfPath: "//cdn.jsdelivr.net/zeroclipboard/2.2.0/ZeroClipboard.swf" } );
+      ZeroClipboard.config( { swfPath: "/assets/swf/ZeroClipboard.swf" } );
       var client = new ZeroClipboard( document.getElementById('d_clip_button') );
 
       client.on( 'ready', function(event) {
