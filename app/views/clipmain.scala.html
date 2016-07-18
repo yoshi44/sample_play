@@ -29,7 +29,8 @@
 
         client.on( 'copy', function(event) {
           var textareaElement = document.getElementById("textarea_id");
-          event.clipboardData.setData('text/plain', textareaElement.value);
+          //event.clipboardData.setData('text/plain', textareaElement.value);
+          client.setText(textareaElement.value);
           //event.clipboardData.setData('text/plain', event.target.innerHTML);
         } );
 
